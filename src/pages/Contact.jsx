@@ -1,9 +1,9 @@
-import ComingSoon from "./Coming-soon";
+import UnderConstruction from "./UnderConstruction";
 
 const Contact = () => {
     return (
         <div>
-            <ComingSoon />
+            <UnderConstruction />
         </div>
     )
 }
