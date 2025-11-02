@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="w-full bg-light text-dark px-4 py-3"
+      className="w-full bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 px-4 py-3 fixed top-0 left-0 z-50 shadow-md transition-colors duration-300"
       role="navigation"
       aria-label="main navigation"
     >
@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Brand */}
         <NavLink className="text-2xl font-bold" to="/">
-          Darshit<span className="text-blue-400">.</span>
+          Darshit<span className="text-blue-500 dark:text-blue-400">.</span>
         </NavLink>
 
         {/* Burger (mobile only) */}
@@ -48,39 +48,46 @@ const Navbar = () => {
               to={link.path}
               onClick={handleNavClick}
               className={({ isActive }) =>
-                `hover:text-blue-500 transition ${
-                  isActive ? "text-blue-500 font-semibold" : ""
+                `hover:text-blue-500 dark:hover:text-blue-400 transition ${
+                  isActive
+                    ? "text-blue-500 dark:text-blue-400 font-semibold"
+                    : ""
                 }`
               }
             >
               {link.name}
             </NavLink>
           ))}
-
+          {/* Uncomment when ThemeToggle is implemented */}
           {/* <ThemeToggle /> */}
         </div>
       </div>
 
+      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black/70 backdrop-blur-lg flex flex-col items-center justify-center md:hidden">
-          <div className="bg-light rounded-xl shadow-lg w-4/5 max-w-xs py-6 flex flex-col gap-4 text-center">
+        <div className="fixed inset-0 z-40 bg-black/70 backdrop-blur-md flex flex-col items-center justify-center md:hidden transition-all duration-300">
+          <div className=" rounded-xl shadow-xl w-4/5 max-w-xs py-6 flex flex-col gap-5 text-center">
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}
                 to={link.path}
                 onClick={handleNavClick}
                 className={({ isActive }) =>
-                  `hover:text-blue-500 transition text-lg ${
-                    isActive ? "text-blue-500 font-semibold" : "text-white"
+                  `hover:text-blue-500 dark:hover:text-blue-400 transition text-lg ${
+                    isActive
+                      ? "text-blue-500 dark:text-blue-400 font-semibold"
+                      : "text-white dark:text-gray-100"
                   }`
                 }
               >
                 {link.name}
               </NavLink>
             ))}
+
+            {/* Close Button */}
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="mt-4 text-3xl text-white rounded-lg hover:text-blue-500"
+              className="mt-4 text-3xl text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-400 transition"
             >
               ×
             </button>
