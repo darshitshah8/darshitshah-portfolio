@@ -5,7 +5,7 @@ import { useTypewriter } from "../hooks/useTypewriter";
 const HomePage = () => {
   const experience = useExperience(new Date(2023, 1, 1));
   const text = useTypewriter(
-    ["Software Engineer.", "Full Stack Developer.", "UI Enthusiast."],
+    ["Software Engineer.", "Frontend Developer.", "UI Enthusiast."],
     120,
     60,
     1500
