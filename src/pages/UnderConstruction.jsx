@@ -11,7 +11,7 @@ const UnderConstruction = () => {
         className="w-full max-w-md bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 text-center"
       >
         {/* Header */}
-        <h1 className="text-lg md:text-2xl font-semibold text-yellow-500 mb-3">
+        <h1 className="text-lg md:text-2xl font-semibold text-orange-500 dark:text-orange-400 mb-3">
           🚧 Page Under Construction 🚧
         </h1>
 
@@ -25,7 +25,7 @@ const UnderConstruction = () => {
           {[0, 1, 2].map((i) => (
             <motion.span
               key={i}
-              className="w-3 h-3 bg-yellow-400 rounded-full"
+              className="w-3 h-3 bg-orange-400 dark:bg-orange-500 rounded-full"
               animate={{
                 opacity: [0.3, 1, 0.3],
                 y: [0, -6, 0],

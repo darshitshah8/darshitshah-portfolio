@@ -13,7 +13,7 @@ const ComingSoon = () => {
       >
         {/* Animated header with glow */}
         <motion.h1
-          className="text-lg md:text-xl font-semibold bg-blue-400 text-dark py-2 px-4 rounded-lg shadow-inner inline-block mb-3"
+          className="text-lg md:text-xl font-semibold bg-orange-400 dark:bg-orange-500 text-white py-2 px-4 rounded-lg shadow-inner inline-block mb-3"
           transition={{ duration: 2, repeat: Infinity }}
         >
           🚀 Coming Soon 🚀
@@ -30,7 +30,7 @@ const ComingSoon = () => {
           {[0, 1, 2].map((i) => (
             <motion.span
               key={i}
-              className="w-3 h-3 bg-blue-400 rounded-full shadow-md"
+              className="w-3 h-3 bg-orange-400 dark:bg-orange-500 rounded-full shadow-md"
               animate={{
                 opacity: [0.3, 1, 0.3],
                 y: [0, -6, 0],

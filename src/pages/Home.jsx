@@ -32,14 +32,14 @@ const HomePage = () => {
             Darshit Shah
           </h1>
 
-          <p className="text-blue-600 dark:text-blue-400 text-xl font-medium">
+          <p className="text-orange-600 dark:text-orange-400 text-xl font-medium">
             <span>{text}</span>
             <span className="animate-pulse ml-1">|</span>
           </p>
 
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             A passionate{" "}
-            <span className="font-semibold text-blue-500 dark:text-blue-400">
+            <span className="font-semibold text-orange-500 dark:text-orange-400">
               software developer
             </span>{" "}
             building modern full-stack applications with attention to detail and
@@ -47,7 +47,7 @@ const HomePage = () => {
           </p>
 
           <p className="text-gray-600 dark:text-gray-400">
-            <span className="font-semibold text-blue-500 dark:text-blue-400">
+            <span className="font-semibold text-orange-500 dark:text-orange-400">
               Experience:
             </span>{" "}
             {experience}

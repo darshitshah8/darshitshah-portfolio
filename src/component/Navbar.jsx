@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Brand */}
         <NavLink className="text-2xl font-bold" to="/">
-          Darshit<span className="text-blue-500 dark:text-blue-400">.</span>
+          Darshit<span className="text-orange-500 dark:text-orange-400">.</span>
         </NavLink>
 
         {/* Burger (mobile only) */}
@@ -48,9 +48,9 @@ const Navbar = () => {
               to={link.path}
               onClick={handleNavClick}
               className={({ isActive }) =>
-                `hover:text-blue-500 dark:hover:text-blue-400 transition ${
+                `hover:text-orange-500 dark:hover:text-orange-400 transition ${
                   isActive
-                    ? "text-blue-500 dark:text-blue-400 font-semibold"
+                    ? "text-orange-500 dark:text-orange-400 font-semibold"
                     : ""
                 }`
               }
@@ -58,8 +58,7 @@ const Navbar = () => {
               {link.name}
             </NavLink>
           ))}
-          {/* Uncomment when ThemeToggle is implemented */}
-          {/* <ThemeToggle /> */}
+          <ThemeToggle className="ml-2" />
         </div>
       </div>
 
@@ -73,9 +72,9 @@ const Navbar = () => {
                 to={link.path}
                 onClick={handleNavClick}
                 className={({ isActive }) =>
-                  `hover:text-blue-500 dark:hover:text-blue-400 transition text-lg ${
+                  `hover:text-orange-500 dark:hover:text-orange-400 transition text-lg ${
                     isActive
-                      ? "text-blue-500 dark:text-blue-400 font-semibold"
+                      ? "text-orange-500 dark:text-orange-400 font-semibold"
                       : "text-white dark:text-gray-100"
                   }`
                 }
@@ -84,10 +83,15 @@ const Navbar = () => {
               </NavLink>
             ))}
 
+            {/* Theme Toggle in Mobile Menu */}
+            <div className="mt-4 flex justify-center">
+              <ThemeToggle />
+            </div>
+
             {/* Close Button */}
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="mt-4 text-3xl text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-400 transition"
+              className="mt-4 text-3xl text-gray-800 dark:text-white hover:text-orange-500 dark:hover:text-orange-400 transition"
             >
               ×
             </button>
